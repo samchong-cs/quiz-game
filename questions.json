@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is the longest river in Malaysia?",
+    "options": ["a) Rajang River", "b) Kinabatangan River", "c) Perak River", "d) Kesang River"],
+    "correct": "a",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Who was the second Prime Minister of Malaysia?",
+    "options": ["a) Tunku Abdul Rahman", "b) Abdul Razak Hussein", "c) Hussein Onn", "d) Mahathir Mohamad"],
+    "correct": "b",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the correct list of Federal Territories?",
+    "options": ["a) Kuala Lumpur, Labuan, Putrajaya", "b) Kuala Lumpur, Selangor, Putrajaya", "c) Kuala Lumpur, Ipoh, Labuan", "d) Labuan, Putrajaya, Penang"],
+    "correct": "a",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which state does NOT have a Sultan?",
+    "options": ["a) Pahang", "b) Penang", "c) Terengganu", "d) Kelantan"],
+    "correct": "b",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which year did Sabah and Sarawak join Malaysia?",
+    "options": ["a) 1957", "b) 1963", "c) 1965", "d) 1970"],
+    "correct": "b",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which of these countries is NOT in Southeast Asia?",
+    "options": ["a) Vietnam", "b) Thailand", "c) Malaysia", "d) South Korea"],
+    "correct": "d",
+    "difficulty": "easy"
+  }
+]
