@@ -1,8 +1,6 @@
 # Started : 13 Nov 2025
 # Author  : Samuel Chong
 
-global questions
-
 import json
 
 def load_questions():
@@ -11,16 +9,16 @@ def load_questions():
     return questions
 
 def filter_difficulty(questions, difficulty):
-    filtered = []
-    for question in questions:
-        if question["difficulty"] == difficulty:
-            filtered.append(question)
+    filtered = [question for question in questions if question["difficulty"] == difficulty]
+
     return filtered
 
-def menu():
+def menu(questions):
     print("\nYou can choose from the following difficulty options: \n 1) Easy 😄 \n 2) Medium 😐 \n 3) Hard 😈")
     user_difficulty_choice = input("\nType the difficulty level you want for the quiz: ").lower()
+
     filtered_questions = filter_difficulty(questions, user_difficulty_choice)
+
     return filtered_questions 
 
 def display_question(question):
@@ -28,12 +26,22 @@ def display_question(question):
     for option in question["options"]:
         print(option)
 
-    user_answer = input("Enter your answer: ")
-    return user_answer
+    answer = input("Enter your answer: ")
+    return answer
+
+def check_answer(user_answer, correct_answer):
+    return user_answer == correct_answer
+
+def track_score(is_correct, score):
+    if is_correct:
+        score += 1
+    return score
 
 questions = load_questions()
-selected_questions = menu()
+selected_questions = menu(questions)
 
+# Question runs here after menu function filters:
 if selected_questions:
+    global user_answer
     user_answer = display_question(selected_questions[0])
     print(f"You answered: {user_answer}")
