@@ -35,13 +35,29 @@ def check_answer(user_answer, correct_answer):
 def track_score(is_correct, score):
     if is_correct:
         score += 1
+    
+    return score
+
+def play_game(selected_questions):
+    score = 0
+    for question in selected_questions:
+        user_answer = display_question(question)
+        print(f"You answered: {user_answer}")
+        is_correct = check_answer(user_answer, question["correct"])
+        score = track_score(is_correct, score)
+
+
     return score
 
 questions = load_questions()
-selected_questions = menu(questions)
 
-# Question runs here after menu function filters:
-if selected_questions:
-    global user_answer
-    user_answer = display_question(selected_questions[0])
-    print(f"You answered: {user_answer}")
+while True:
+    selected_questions = menu(questions)
+    final_score = play_game(selected_questions)
+    print(f"Your final score: {final_score}/{len(selected_questions)}")
+
+    whether =  input("Do you want to replay (yes/no) ").lower()
+    if whether == "yes":
+        continue
+    else:
+        break
